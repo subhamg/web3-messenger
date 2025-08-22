@@ -9,3 +9,7 @@ backend/.history
 frontend/node_modules
 frontend/.env
 frontend/.history
+
+
+backend/dist
+frontend/dist
