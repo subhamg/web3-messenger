@@ -29,6 +29,7 @@ ENV PORT=4000
 
 EXPOSE 4000
 
-CMD ["node", "dist/index.js"]
+# Use Node ESM specifier resolution to allow extension-less imports in compiled JS
+CMD ["node", "--experimental-specifier-resolution=node", "dist/index.js"]
 
  
