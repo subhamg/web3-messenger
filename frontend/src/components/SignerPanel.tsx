@@ -14,8 +14,6 @@ import { useClipboard } from "@mantine/hooks";
 import { useApp } from "../hooks/useApp";
 import { useSigner } from "../hooks/useSigner";
 
-// Result is handled by AppContext notifications/history; no local type needed here.
-
 export function SignerPanel() {
   const { primaryWallet, user } = useDynamicContext();
   const { verify } = useApp();
@@ -26,7 +24,7 @@ export function SignerPanel() {
   const address = primaryWallet?.address || null;
 
   async function handleSign() {
-    if (!primaryWallet) return; // require auth from AuthPanel
+    if (!primaryWallet) return;
     await signMessage(message);
   }
 
